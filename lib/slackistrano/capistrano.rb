@@ -31,7 +31,7 @@ module Slackistrano
                    else
                      opts = config.dup.merge(env: @env)
                      klass = opts.delete(:klass) || Messaging::Default
-                     klass.new(opts)
+                     klass.new(**opts)
                    end
     end
 
